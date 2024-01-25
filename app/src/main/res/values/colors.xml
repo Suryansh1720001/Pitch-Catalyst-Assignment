@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="light_violet">#E0F4FF</color>
+    <color name="violet">#FF5B22</color>
+    <color name="violet_1">#FF5B22</color>
+    <color name="teal">#000000</color>
+    <color name="teal_700">#FECDA6</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="more_light_brown">#EFEDE3</color>
+</resources>

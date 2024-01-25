@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- combined_background.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Layer for custom background -->
+    <item android:drawable="@drawable/btn_bg"/>
+
+    <!-- Layer for selectable item background -->
+    <item android:drawable="?attr/selectableItemBackgroundBorderless"/>
+</layer-list>

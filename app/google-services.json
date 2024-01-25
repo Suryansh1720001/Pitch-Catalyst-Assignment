@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "243790000273",
+    "project_id": "pitch-catalyst-assignment",
+    "storage_bucket": "pitch-catalyst-assignment.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:243790000273:android:a813425484e573eedf0f30",
+        "android_client_info": {
+          "package_name": "com.lokal.pitchcatalystapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzIZCAu9BvTrtLWAJZLYJiQavk6AeqALg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
