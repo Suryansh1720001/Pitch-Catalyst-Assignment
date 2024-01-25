@@ -1,8 +1,7 @@
-package com.lokal.pitchcatalystapplication
+package com.lokal.pitchcatalystapplication.ui
 
 import android.app.Dialog
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
@@ -12,6 +11,8 @@ import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.firestore.FirebaseFirestore
 import com.lokal.pitchcatalystapplication.DataModel.Item
+import com.lokal.pitchcatalystapplication.ui.adapter.ItemAdapter
+import com.lokal.pitchcatalystapplication.R
 import com.lokal.pitchcatalystapplication.ViewModel.ItemViewModel
 import com.lokal.pitchcatalystapplication.databinding.ActivityMainBinding
 import com.lokal.pitchcatalystapplication.databinding.CustomDialogBinding

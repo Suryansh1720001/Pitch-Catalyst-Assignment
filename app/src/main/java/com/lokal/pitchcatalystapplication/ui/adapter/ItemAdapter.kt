@@ -1,4 +1,4 @@
-package com.lokal.pitchcatalystapplication
+package com.lokal.pitchcatalystapplication.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.lokal.pitchcatalystapplication.DataModel.Item
+import com.lokal.pitchcatalystapplication.R
 
 
 class ItemAdapter(private val onItemLongClickListener: ((Item) -> Unit)? = null) :
