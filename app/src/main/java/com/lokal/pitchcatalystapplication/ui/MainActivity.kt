@@ -29,6 +29,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        // firebase initialization
         db = FirebaseFirestore.getInstance()
         // db collection name is item defined
         dbRef = db.collection("item")
@@ -37,25 +38,28 @@ class MainActivity : AppCompatActivity() {
         itemViewModel = ViewModelProvider(this).get(ItemViewModel::class.java)
 
         adapter = ItemAdapter { selectedItems ->
-            showMaterialInputDialogUser(selectedItems)
+            DialogForUser(selectedItems)
         }
+
+        // data is showcasing
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
         binding.recyclerView.adapter = adapter
 
 
+        // data is live observing when data is changed then it auto detect by view model
         itemViewModel.items.observe(this) { items ->
             adapter.setLit(items)
         }
 
 
         binding.addButton.setOnClickListener {
-            showMaterialInputDialog()
+            AddDataDialog()
         }
 
         binding.deleteButton.setOnClickListener {
             selectedItems = adapter.getSelectedItems()
             if (selectedItems.isNotEmpty()) {
-                itemViewModel.deleteSelectedItems(selectedItems)
+                itemViewModel.selectedItemDeleted(selectedItems)
             } else {
                 Toast.makeText(this@MainActivity, "Nothing to delete", Toast.LENGTH_SHORT).show()
             }
@@ -64,7 +68,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun showMaterialInputDialog() {
+    private fun AddDataDialog() {
         val AddItemDialog = Dialog(this)
         AddItemDialog.setCancelable(false)
         val binding = CustomDialogBinding.inflate(layoutInflater)
@@ -98,7 +102,7 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    private fun showMaterialInputDialogUser(selectedItems: Item) {
+    private fun DialogForUser(selectedItems: Item) {
         val builder = MaterialAlertDialogBuilder(this)
         builder.setTitle("Enter Details")
         val customLayout = layoutInflater.inflate(R.layout.custom_dialog, null)

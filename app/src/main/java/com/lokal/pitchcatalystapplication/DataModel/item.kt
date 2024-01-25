@@ -1,5 +1,6 @@
 package com.lokal.pitchcatalystapplication.DataModel
 
+// data model for the item used
 data class Item(
     val title: String? = "",
     val desc: String? = "",

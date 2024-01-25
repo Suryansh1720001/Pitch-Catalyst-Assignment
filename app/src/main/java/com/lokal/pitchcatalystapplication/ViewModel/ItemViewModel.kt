@@ -27,6 +27,8 @@ class ItemViewModel : ViewModel() {
         observeItems()
     }
 
+
+    // function for live observing the data
     private fun observeItems() {
         viewModelScope.launch(Dispatchers.IO) {
             callbackFlow {
@@ -44,7 +46,9 @@ class ItemViewModel : ViewModel() {
         }
     }
 
-    fun deleteSelectedItems(selectedItems: List<Item>) {
+
+    // by this function selected items will be deleted
+    fun selectedItemDeleted(selectedItems: List<Item>) {
         viewModelScope.launch(Dispatchers.IO) {
             for (item in selectedItems) {
                 try {

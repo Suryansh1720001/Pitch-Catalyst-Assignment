@@ -34,6 +34,9 @@ class ItemAdapter(private val onItemLongClickListener: ((Item) -> Unit)? = null)
     override fun getItemCount(): Int = mlist.size
 
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
+
+        // bind all the data
+
         val current = mlist[position];
         holder.title.text = current.title
         holder.desc.text = current.desc
